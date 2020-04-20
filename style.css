@@ -100,7 +100,7 @@ canvas{
 	text-indent:	1em;
 }
 
-.send{
+#send{
 	width:	100%;
 	height:	100%;
 	border:	0;
@@ -111,7 +111,7 @@ canvas{
 	color: var(--pink, red);
 }
 
-.send:hover{
+#send:hover{
 	background:	var(--pink, red);
 	color:	var(--grey, black);
 }
