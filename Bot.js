@@ -4,6 +4,8 @@ class Bot{
 	}
 
 	reply(msg){
-
+		msg.toLowerCase();
+		
+		
 	}
 }

@@ -5,6 +5,11 @@
 	--grey2:	rgb(40, 40, 40);
 }
 
+@font-face{
+	font-family:	myFont;
+	src:	url(https://fonts.googleapis.com/css?family=Bebas+Neue);
+}
+
 
 body{
 	background:	var(--grey, black);
@@ -17,6 +22,8 @@ body{
 
 	margin:	auto;
 	padding:	auto;
+
+	font-family:	myFont;
 }
 
 .grid{
