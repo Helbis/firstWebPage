@@ -1,124 +1,144 @@
-/*	Grid Layout	*/
+/*	New version	*/
 :root{
-	--pink:	#ff00ca;
-	--grey:	rgb(51, 51, 51);
-	--grey2:	rgb(40, 40, 40);
-}
+	--myPink:	#ff00ca;
+    --myGrey:	rgb(51, 51, 51);
+	--myGrey2:	rgb(40, 40, 40);
 
-@font-face{
-	font-family:	myFont;
-	src:	url(https://fonts.googleapis.com/css?family=Bebas+Neue);
+	--myFont:	"Pacifico";	
 }
-
 
 body{
-	background:	var(--grey, black);
-	
-	position:	fixed;
-	top:	0;
-	left:	0;
-	height:	100%;
 	width:	100%;
+	height:	100vh;
 
-	margin:	auto;
-	padding:	auto;
+	background:	var(--myGrey, black);
 
-	font-family:	myFont;
+	font-size:	2em;
+    color:	var(--myPink, red);
+   
+    padding:	0;
+    margin:	0;
+
+	font-family:	var(--myFont);
+}
+
+
+.ScreenFlexColumn, .ScreenFlexRow{
+	display:	flex;
+    
+    align-content:	center;
+    justify-content:	center;
+}
+
+.ScreenFlexColumn{
+    flex-direction:	column;
+    text-align:	center;
+}
+
+.ScreenFlexRow{
+	height:	100vh;
+
+    flex-direction:	row;
 }
 
 .grid{
-	display:	grid;
-	height:	90%;
-	max-width:	400px;
-	margin:	auto;
+	min-width:	200px;
+	background:	var(--myGrey, black);
+    
+    display:	grid;
+    grid-template-columns:	1fr 2fr 1fr;
+    grid-template-rows:	1fr 10fr 1fr;
 	
-	padding:	5%;
-
-	grid-template-columns:	4fr 1fr;
-	grid-template-rows:	1fr 10fr 1fr;
-
-	grid-gap:	1em;
+    grid-gap:	0.2em;
+    
+    padding:	0.2em;
 }
 
-.box{
-	background:	#fff;
-	text-align:	center;
-	/*border:	5px solid red;*/
-}
 
 .box:hover{
-	box-shadow:	0 0 3em 1em var(--pink, red);
+	box-shadow:	0 0 5em 1em var(--myPink, red);	
 }
 
-#topTitle{
-	grid-column:	1/3;
 
-	background:	var(--grey, #000);	
-	color:	var(--pink, red);
-	font-size: 4em;
+#box1, #box2{
+	background:	var(--myGrey, black);;
+    grid-column:	1/4;
 }
 
-#topTitle:hover{
-	text-transform:	uppercase;
-	
-	box-shadow: none;
-	text-shadow:	0 0 20px var(--pink, red), 0 0 2em var(--pink, red);
+/*	Title bar	*/
+#box1{
+	grid-row:	1/2;
+    
+    font-size:	1em;
+}
+#box1:hover{
+	box-shadow:	none;
+	text-shadow:	0 0 5px var(--myPink, red), 0 0 2em var(--myPink, red);
 }
 
-.flexbox{
-	display:	flex;
-	flex-wrap:	nowrap;
-	flex-direction:	row;
-
-	justify-content:	center;
-	align-content:	center;
-	align-items:	center;
-}
-
+/*	Main part with canvas	*/
 #box2{
-	grid-column:	1/3;	
-}
+	width:	400px;
 
-#screen{
-	width:	100%;
-	height:	100%;
+	grid-row: 2/4;
 }
-
 canvas{
-	border:	0;
-	padding:	0;
-	margin:	0;
-}
+	background:	var(--myGrey, black);
 
-/*	User input	*/
-#input{
 	width:	100%;
-	height:	100%;
-	margin:	0;
-	padding:	0;
-	border:	0;
-
-	background:	var(--grey2, white);
-	color:	var(--pink, red);
-
-	resize:	none;
-
-
-	text-indent:	1em;
+    height:	100%;
+    
+    padding:	0;
+    border:		0;
+    margin:		0;
 }
 
-#send{
+/*	Input	*/
+#box3{
+    min-width:	200px;
+    min-height:	1em;
+
+	grid-column:	1/3;
+}
+.input{
+	height:	100%;
+
+	border:		0;
+    padding:	0;
+    margin:		0;
+    
+    background:	var(--myGrey2, black);;
+    
+    text-indent:	1em;
+    color:	var(--myPink, red);
+}
+.input:focus{
+	box-shadow:	0 0 5px var(--myPink, red);
+}
+
+
+/*	Send button	*/
+#box4{
+	grid-column:	3/4;
+}
+.send{
 	width:	100%;
-	height:	100%;
-	border:	0;
-	padding:	0;
+    height:	100%;
+    
+    border:		0;
+    padding:	0;
+    margin:		0;
 
-	background:	var(--grey2, white);
+	background:	var(--myGrey2, black);
+    color:	var(--myPink, red);
 
-	color: var(--pink, red);
+	font-family:	var(--myFont);
 }
-
-#send:hover{
-	background:	var(--pink, red);
-	color:	var(--grey, black);
+.send:hover{
+	background:	var(--myPink, red);
+	color:	var(--myGrey2, black);
+}
+.send:active{
+	text-transform:	uppercase;
+	font-weight:	bold;
 }

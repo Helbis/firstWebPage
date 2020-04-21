@@ -1,7 +1,7 @@
 const pink = "#fa00cc";
 const grey = [51, 51, 51];
 const fps = 2;
-const divID = "screen";
+const divID = "box2";
 
 let cnv;
 let bot;

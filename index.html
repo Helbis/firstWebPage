@@ -5,30 +5,47 @@
 		<meta charset="UTF-8">
 		
 		<title>Calibot</title>
+		<!--	Favicon		-->
+		<link rel="apple-touch-icon" sizes="180x180" href="./resources/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./resources/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./resources/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+
 		<link rel="stylesheet" type="text/css" href="./style.css">
+		
+		<!--	Fonts	-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue"> 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico"> 
+
 		<script src="/home/helbis/Public/p5.min.js"></script>	<!--	Local p5.min.js	-->
-		<!--<script defer src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>-->	<!--	Hosted p5.js	-->
+		<!--<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>-->	<!--	Hosted p5.js	-->
 		<!--<script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>-->	<!--	Rivescript hosted	-->
-		<script src="./main.js"></script>
-		<script src="./Message.js"></script>
-		<script src="./Bot.js"></script>
+		<!--<script defer src="./main.js"></script>
+		<script defer src="./Message.js"></script>
+		<script defer src="./Bot.js"></script>-->
 		
 	</head>
 
 	<body>
-		<!--	Grid version	-->
-		<div class="grid">
-			<div class="box flexbox" id="topTitle">Calibot</div>
-			<div class="box" id="box2">
-				<div id="screen"></div>
+		<!--	New version	-->
+		<div class="ScreenFlexColumn">
+			<div class="ScreenFlexRow">
+				<div class="grid">
+					<div class="box ScreenFlexColumn" id="box1">
+						Calibot
+					</div>
+					<div class="box ScreenFlexColumn" id="box2">
+						<!--	<canvas width="100%" height="100%"></canvas>	-->
+					</div>
+					<div class="box ScreenFlexColumn" id="box3">
+						<input class="input" placeholder="Ask me anything!" autofocus></input>
+					</div>
+					<div class="box ScreenFlexColumn" id="box4">
+						<button class="send">Send</button>
+					</div>
+				</div>
 			</div>
-			<div class="box" id="box3">
-				<input type="text" id="input" placeholder="Ask anything" autofocus size="50"></input>
-			</div>
-			<div class="box flexbox" id="box4">
-				<button id="send">Send</button>
-			</div>
-		</div>
+		</div>	
 
 	</body>
 </html>
