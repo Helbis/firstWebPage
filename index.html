@@ -20,9 +20,9 @@
 		<script src="/home/helbis/Public/p5.min.js"></script>	<!--	Local p5.min.js	-->
 		<!--<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>-->	<!--	Hosted p5.js	-->
 		<!--<script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>-->	<!--	Rivescript hosted	-->
-		<!--<script defer src="./main.js"></script>
 		<script defer src="./Message.js"></script>
-		<script defer src="./Bot.js"></script>-->
+		<script defer src="./Bot.js"></script>
+		<script defer src="./main.js"></script>
 		
 	</head>
 
@@ -38,10 +38,10 @@
 						<!--	<canvas width="100%" height="100%"></canvas>	-->
 					</div>
 					<div class="box ScreenFlexColumn" id="box3">
-						<input class="input" placeholder="Ask me anything!" autofocus></input>
+						<input id="input" placeholder="Ask me anything!" autofocus></input>
 					</div>
 					<div class="box ScreenFlexColumn" id="box4">
-						<button class="send">Send</button>
+						<button id="send" onclick="chat()">Send</button>
 					</div>
 				</div>
 			</div>
