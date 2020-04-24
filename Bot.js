@@ -5,18 +5,20 @@ class Bot{
 			"[push|press].?up.?" : ["Do 100 of them everyday!"],
 
 			//Bodyrow
-			"[bodyweight.?row.?|australian pull.?up.?]" : ["Great to build your lats for pullups!"],
+			"bodyweight.?row.?" : ["Great to build your lats for pullups!"],
 
 			//Pull up
-			"[pull.?up.?]" : ["Pull ups are one of the hardest standard exercise, aren't they?"],
+			"pull.?up.?" : ["Pull ups are one of the hardest standard exercise, aren't they?"],
 
+			//Squats
+			"squat[s]?" : ["I love doing them everyday!", "How many do you do now?"],			
 
 
 			//Greetings
 			"h[ello|ey|owdy|i]" : ["Hello", "Hey", "Howdy", "Hi"],
 
 			//Goodbyes
-			"[[good]?[bye]]|[see [y[ou|a]]]" : ["Goodbye", "See you later"],
+			"good.?bye" : ["Goodbye", "See you later"],
 
 			//Affirmation
 			"y[up|es|eah]" : ["I think so too ;)"],
@@ -31,15 +33,15 @@ class Bot{
 	}
 
 	reply(msg){
-		let msg = this.preReply(msg);
-			print(msg);
+		//msg.toLowerCase();
+		this.preReply(msg);
 		let result = false;	
 		const keys = Object.keys(this._brain);
 
 		for(let i=0; i<keys.length; i++){
 			let rgx = new RegExp(keys[i]);
 
-			if(rgx.text(msg.text)){
+			if(rgx.test(msg.text)){
 				//It matched with something
 				//Reply in some way
 
